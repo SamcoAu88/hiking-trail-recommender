@@ -75,6 +75,11 @@ def render_trail_card(trail, index):
             st.markdown(f"🗺️ **How to Get There:** {trail.get('how_to_get_there', 'N/A')}")
         
         st.info(f"💡 **Pro Tip:** {trail.get('pro_tip', 'N/A')}")
+        trail_name = trail.get('name', '')
+        trail_location = trail.get('location', '')
+        maps_query = f"{trail_name} {trail_location}".replace(" ", "+")
+        maps_url = f"https://www.google.com/maps/search/?api=1&query={maps_query}"
+        st.link_button("🗺️ Open in Google Maps", maps_url, use_container_width=True)
 
 if find_button:
     if not location:
