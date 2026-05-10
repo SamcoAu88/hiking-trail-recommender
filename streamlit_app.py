@@ -174,12 +174,10 @@ Format exactly like this:
         
         except json.JSONDecodeError:
             st.error("Something went wrong, please try again!")
-            else:
-    st.markdown("""
-    ## 🌍 Discover Your Perfect Trail — Anywhere on Earth
-    
-    Use the sidebar to set your preferences and let AI find the best hiking trails for you.
-    """)
+
+else:
+    st.markdown("## 🌍 Discover Your Perfect Trail — Anywhere on Earth")
+    st.markdown("Use the sidebar to set your preferences and let AI find the best hiking trails for you.")
     
     st.divider()
     
@@ -212,7 +210,6 @@ Format exactly like this:
         """)
     
     st.divider()
-    
     st.markdown("### 🔥 Popular searches")
     
     col1, col2, col3, col4 = st.columns(4)
@@ -230,7 +227,6 @@ Format exactly like this:
             st.info("Enter **Daintree Queensland** in the location field and click Find My Perfect Trails!")
     
     st.divider()
-    
     st.markdown("### 🌏 Explore by region")
     
     col1, col2, col3 = st.columns(3)
