@@ -174,3 +174,78 @@ Format exactly like this:
         
         except json.JSONDecodeError:
             st.error("Something went wrong, please try again!")
+            else:
+    st.markdown("""
+    ## 🌍 Discover Your Perfect Trail — Anywhere on Earth
+    
+    Use the sidebar to set your preferences and let AI find the best hiking trails for you.
+    """)
+    
+    st.divider()
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.markdown("### How it works")
+        st.markdown("""
+        **1️⃣ Set your location**  
+        Any city, region or country in the world
+        
+        **2️⃣ Choose your preferences**  
+        Difficulty, distance, scenery, season and more
+        
+        **3️⃣ Get AI recommendations**  
+        Real trails with full details — distance, wildlife, parking, pro tips
+        """)
+    
+    with col2:
+        st.markdown("### What you get")
+        st.markdown("""
+        📏 **Distance & elevation** for each trail  
+        ⏱️ **Estimated time** to complete  
+        🦘 **Wildlife** you might spot  
+        👟 **What to bring** checklist  
+        🅿️ **Parking & directions**  
+        💡 **Pro tips** from local experts  
+        ⚠️ **Safety warnings**  
+        📅 **Best season** to visit  
+        """)
+    
+    st.divider()
+    
+    st.markdown("### 🔥 Popular searches")
+    
+    col1, col2, col3, col4 = st.columns(4)
+    with col1:
+        if st.button("🇦🇺 Brisbane trails", use_container_width=True):
+            st.info("Enter **Brisbane** in the location field and click Find My Perfect Trails!")
+    with col2:
+        if st.button("🏔️ Blue Mountains", use_container_width=True):
+            st.info("Enter **Blue Mountains** in the location field and click Find My Perfect Trails!")
+    with col3:
+        if st.button("🌊 Bondi to Coogee", use_container_width=True):
+            st.info("Enter **Bondi Sydney** in the location field and click Find My Perfect Trails!")
+    with col4:
+        if st.button("🌿 Daintree Rainforest", use_container_width=True):
+            st.info("Enter **Daintree Queensland** in the location field and click Find My Perfect Trails!")
+    
+    st.divider()
+    
+    st.markdown("### 🌏 Explore by region")
+    
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        with st.container(border=True):
+            st.markdown("#### 🇦🇺 Australia")
+            st.caption("Blue Mountains · Daintree · Grampians · Cradle Mountain · Kakadu")
+    with col2:
+        with st.container(border=True):
+            st.markdown("#### 🌏 Asia & Pacific")
+            st.caption("Nepal · New Zealand · Japan · Bali · Philippines")
+    with col3:
+        with st.container(border=True):
+            st.markdown("#### 🌍 World")
+            st.caption("Patagonia · Swiss Alps · Kilimanjaro · Machu Picchu · Scottish Highlands")
+    
+    st.divider()
+    st.caption("⬅️ Set your preferences in the sidebar and click **Find My Perfect Trails!** to get started.")
