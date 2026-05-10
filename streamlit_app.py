@@ -174,18 +174,3 @@ Format exactly like this:
         
         except json.JSONDecodeError:
             st.error("Something went wrong, please try again!")
-
-else:
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        with st.container(border=True):
-            st.markdown("### 🌍 Worldwide Trails")
-            st.caption("Search any location on Earth")
-    with col2:
-        with st.container(border=True):
-            st.markdown("### 🤖 AI Powered")
-            st.caption("Smart recommendations just for you")
-    with col3:
-        with st.container(border=True):
-            st.markdown("### 🎯 Personalized")
-            st.caption("Tailored to your preferences")
